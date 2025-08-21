@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlashCard App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        {% if session.current_view == 'start' %}
+            <!-- Start Screen -->
+            <div class="header">
+                <h1>📚 French Flashcards</h1>
+                <p>Learn French vocabulary with interactive flashcards</p>
+            </div>
+            
+            <div class="info-box">
+                <h3>Ready to learn?</h3>
+                <p>{{ total_cards }} cards waiting for you!</p>
+                {% if flashcards_summary.categories %}
+                <div class="category-summary">
+                    <h4>📚 Categories:</h4>
+                    {% for category in flashcards_summary.categories %}
+                    <span class="category-tag">{{ category.name }} ({{ category.count }})</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            
+            <form method="POST" action="/start_study">
+                <button type="submit" class="btn btn-primary btn-full">
+                    🚀 Start Learning
+                </button>
+            </form>
+            
+            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #ddd; text-align: center; color: #666;">
+                ⚙️ Levels & Options Coming Soon
+            </div>
+
+        {% elif session.current_view == 'study' %}
+            <!-- Study Screen -->
+            <div class="progress-container">
+                <div class="progress-info">
+                    <span>Card {{ session.used_cards|length }} of {{ total_cards }}</span>
+                    <span class="score-display">Score: {{ session.score.correct }}/{{ session.score.total }}</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: {{ ((session.used_cards|length) / total_cards * 100)|round(1) }}%"></div>
+                </div>
+            </div>
+
+            <!-- English word to translate -->
+            <div class="card">
+                <h3>Translate to French:</h3>
+                <h1>{{ current_card.english }}</h1>
+            </div>
+
+            <!-- Hint display -->
+            {% if session.hint_level > 0 %}
+                <div class="hint-box">
+                    <div class="hint-title">💡 Hint:</div>
+                    <div class="hint-display">
+                        {{ hint_display|safe }}
+                    </div>
+                </div>
+            {% endif %}
+
+            <!-- Input and buttons -->
+            {% if not session.submitted %}
+                <form method="POST" action="/submit_answer">
+                    <div class="form-group">
+                        <label for="user_input">Your answer in French:</label>
+                        <input type="text" 
+                               id="user_input" 
+                               name="user_input" 
+                               class="form-control" 
+                               placeholder="Type the French translation..."
+                               value="{{ session.get('user_input', '') }}"
+                               required>
+                    </div>
+                    
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-warning" onclick="getHint()">
+                            💡 Hint{% if session.hint_level > 0 %} ({{ session.hint_level }}){% endif %}
+                        </button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            {% else %}
+                <!-- Result display -->
+                <div class="result-box {% if session.is_correct %}result-correct{% else %}result-incorrect{% endif %}">
+                    <h4>
+                        {% if session.is_correct %}
+                            ✅ Correct!
+                        {% else %}
+                            ❌ Incorrect
+                        {% endif %}
+                    </h4>
+                    {% if not session.is_correct %}
+                        <p><strong>Correct answer:</strong> {{ current_card.french }}</p>
+                    {% endif %}
+                    <p><em>IPA: {{ current_card.ipa }}</em></p>
+                </div>
+                
+                <form method="POST" action="/next_card">
+                    <button type="submit" class="btn btn-primary btn-full">Next →</button>
+                </form>
+            {% endif %}
+
+            <div class="back-link">
+                <form method="POST" action="/go_to_start" style="display: inline;">
+                    <button type="submit">← Back to Start</button>
+                </form>
+            </div>
+
+        {% elif session.current_view == 'results' %}
+            <!-- Results Screen -->
+            <div class="header">
+                <h1>⭐ Great Job!</h1>
+            </div>
+            
+            <div style="text-align: center; background: #f8f9fa; padding: 2rem; border-radius: 15px; margin: 2rem 0;">
+                <div class="results-score">{{ ((session.score.correct / session.score.total) * 100)|round(0)|int }}%</div>
+                <p style="font-size: 1.2rem; color: #666;">
+                    You got {{ session.score.correct }} out of {{ session.score.total }} cards correct
+                </p>
+            </div>
+            
+            <div class="btn-group">
+                <form method="POST" action="/reset_study">
+                    <button type="submit" class="btn btn-primary">🔄 Study Again</button>
+                </form>
+                <form method="POST" action="/go_to_start">
+                    <button type="submit" class="btn btn-secondary">← Back to Start</button>
+                </form>
+            </div>
+        {% endif %}
+    </div>
+    
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

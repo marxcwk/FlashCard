@@ -1,0 +1,76 @@
+french,english,ipa,category,wordType,level,notes
+Bonjour,Hello,bɔ̃ʒuʁ,Greetings,Interjection,A1,Formal greeting used throughout the day
+Salut,Hi,saly,Greetings,Interjection,A1,Informal greeting among friends
+Bonsoir,Good evening,bɔ̃swaʁ,Greetings,Interjection,A1,Evening greeting
+Bonne nuit,Good night,bɔn nɥi,Greetings,Phrase,A1,Night farewell
+Au revoir,Goodbye,o ʁəvwaʁ,Greetings,Phrase,A1,Standard farewell
+Merci,Thank you,mɛʁsi,Politeness,Interjection,A1,Most common way to say thank you
+Merci beaucoup,Thank you very much,mɛʁsi boku,Politeness,Phrase,A1,Emphasized gratitude
+De rien,You're welcome,də ʁjɛ̃,Politeness,Phrase,A1,Response to thank you
+S'il vous plaît,Please,sil vu plɛ,Politeness,Phrase,A1,Very polite formal
+Excusez-moi,Excuse me,ɛkskyze mwa,Politeness,Phrase,A1,Getting attention or apologizing
+Pardon,Pardon me,paʁdɔ̃,Politeness,Interjection,A1,Simple apology
+Comment allez-vous?,How are you?,kɔmɑ̃ tale vu,Conversation,Question,A1,Formal way to ask about well-being
+Ça va?,How are you?,sa va,Conversation,Question,A1,Informal casual way
+Ça va bien,It's going well,sa va bjɛ̃,Conversation,Phrase,A1,Positive response
+Je ne comprends pas,I don't understand,ʒə nə kɔ̃pʁɑ̃ pa,Communication,Phrase,A2,Essential phrase for learners
+Parlez-vous anglais?,Do you speak English?,paʁle vu ɑ̃glɛ,Communication,Question,A2,Useful when in trouble
+Je m'appelle,My name is,ʒə mapɛl,Introduction,Phrase,A1,Self introduction
+Enchanté,Nice to meet you,ɑ̃ʃɑ̃te,Introduction,Adjective,A1,Response to introduction
+Comment vous appelez-vous?,What's your name?,kɔmɑ̃ vu zaple vu,Introduction,Question,A1,Asking someone's name
+Où est...?,Where is...?,u ɛ,Questions,Question,A1,Location question
+Combien ça coûte?,How much does it cost?,kɔ̃bjɛ̃ sa kut,Questions,Question,A2,Price question
+Qu'est-ce que c'est?,What is this?,kɛs kə sɛ,Questions,Question,A1,Object identification
+Quelle heure est-il?,What time is it?,kɛl œʁ ɛtil,Questions,Question,A2,Time question
+Pourquoi?,Why?,puʁkwa,Questions,Question,A2,Reason question
+Comment?,How?,kɔmɑ̃,Questions,Question,A1,Method question
+Oui,Yes,wi,Basic,Adverb,A1,Simple affirmative
+Non,No,nɔ̃,Basic,Adverb,A1,Simple negative
+Peut-être,Maybe,pøtɛtʁ,Basic,Adverb,A2,Uncertainty expression
+Bien sûr,Of course,bjɛ̃ syʁ,Basic,Phrase,A2,Confirmation
+Maintenant,Now,mɛ̃tnɑ̃,Time,Adverb,A1,Current moment
+Aujourd'hui,Today,oʒuʁdɥi,Time,Adverb,A1,Current day
+Demain,Tomorrow,dəmɛ̃,Time,Adverb,A1,Next day
+Hier,Yesterday,jɛʁ,Time,Adverb,A1,Previous day
+Bientôt,Soon,bjɛ̃to,Time,Adverb,A2,Near future
+Toujours,Always,tuʒuʁ,Time,Adverb,A2,Frequency adverb
+Lundi,Monday,lœ̃di,Time,Noun,A1,First day of week
+Mardi,Tuesday,maʁdi,Time,Noun,A1,Second day of week
+Mercredi,Wednesday,mɛʁkʁədi,Time,Noun,A1,Third day of week
+Jeudi,Thursday,ʒødi,Time,Noun,A1,Fourth day of week
+Vendredi,Friday,vɑ̃dʁədi,Time,Noun,A1,Fifth day of week
+Samedi,Saturday,samdi,Time,Noun,A1,Sixth day of week
+Dimanche,Sunday,dimɑ̃ʃ,Time,Noun,A1,Seventh day of week
+Un,One,œ̃,Numbers,Number,A1,Cardinal number masculine
+Deux,Two,dø,Numbers,Number,A1,Cardinal number
+Trois,Three,tʁwa,Numbers,Number,A1,Cardinal number
+Quatre,Four,katʁ,Numbers,Number,A1,Cardinal number
+Cinq,Five,sɛ̃k,Numbers,Number,A1,Cardinal number
+Six,Six,sis,Numbers,Number,A1,Cardinal number
+Sept,Seven,sɛt,Numbers,Number,A1,Cardinal number
+Huit,Eight,ɥit,Numbers,Number,A1,Cardinal number
+Neuf,Nine,nœf,Numbers,Number,A1,Cardinal number
+Dix,Ten,dis,Numbers,Number,A1,Cardinal number
+Être,To be,ɛtʁ,Verbs,Verb,A1,Most important verb irregular
+Avoir,To have,avwaʁ,Verbs,Verb,A1,Essential verb irregular
+Aller,To go,ale,Verbs,Verb,A1,Movement verb irregular
+Faire,To do/make,fɛʁ,Verbs,Verb,A1,Very common verb irregular
+Vouloir,To want,vulwaʁ,Verbs,Verb,A2,Desire verb irregular
+Pouvoir,To be able to,puvwaʁ,Verbs,Verb,A2,Ability verb irregular
+Bon,Good,bɔ̃,Adjectives,Adjective,A1,Positive quality masculine
+Bonne,Good,bɔn,Adjectives,Adjective,A1,Positive quality feminine
+Mauvais,Bad,movɛ,Adjectives,Adjective,A1,Negative quality masculine
+Grand,Big/Tall,ɡʁɑ̃,Adjectives,Adjective,A1,Size adjective masculine
+Petit,Small/Short,pəti,Adjectives,Adjective,A1,Size adjective masculine
+Nouveau,New,nuvo,Adjectives,Adjective,A1,Time adjective masculine
+Vieux,Old,vjø,Adjectives,Adjective,A1,Time adjective masculine
+Pain,Bread,pɛ̃,Food,Noun,A1,Basic food item
+Eau,Water,o,Food,Noun,A1,Basic drink
+Café,Coffee,kafe,Food,Noun,A1,Popular drink
+Vin,Wine,vɛ̃,Food,Noun,A2,Alcoholic beverage
+Fromage,Cheese,fʁɔmaʒ,Food,Noun,A2,Dairy product
+Maison,House,mɛzɔ̃,Places,Noun,A1,Living place
+Restaurant,Restaurant,ʁɛstɔʁɑ̃,Places,Noun,A1,Eating place
+Hôtel,Hotel,otɛl,Places,Noun,A1,Accommodation
+Banque,Bank,bɑ̃k,Places,Noun,A2,Financial institution
+École,School,ekɔl,Places,Noun,A1,Educational institution
